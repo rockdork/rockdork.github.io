@@ -1,0 +1,109 @@
+# 三言二语 - 石柱的个人网站
+baseURL = 'https://sanyan.github.io/'
+languageCode = 'zh-CN'
+title = '三言二鱼'
+theme = 'PaperMod'
+
+# 基本配置
+author = '石柱'
+description = '石柱的个人网站'
+summaryLength = 50
+paginate = 7
+
+# 外观设置
+[params]
+  # 主题模式
+  defaultTheme = 'auto'  # auto, light, dark
+  
+  # 网站信息
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButton = true
+  ShowTaxonomies = true
+  
+  # 首页
+  homeInfoParams = [
+    Title = '三言二语',
+    Content = '石柱的个人空间，记录思考与发现。'
+  ]
+  
+  # 个人资料
+  [params.profileMode]
+    enabled = true
+    title = "石柱"
+    subtitle = "思考者 | 记录者"
+    imageUrl = "img/profile.jpg"  # 需要放在 static/img/ 目录
+    imageTitle = "我的头像"
+    imageWidth = 120
+    imageHeight = 120
+    buttons = [
+      ["博客", "/posts"],
+      ["标签", "/tags"],
+      ["关于", "/about"]
+    ]
+
+# 菜单
+[[menu.main]]
+  identifier = "posts"
+  name = "博客"
+  url = "/posts/"
+  weight = 1
+
+[[menu.main]]
+  identifier = "tags"
+  name = "标签"
+  url = "/tags/"
+  weight = 2
+
+[[menu.main]]
+  identifier = "about"
+  name = "关于"
+  url = "/about/"
+  weight = 3
+
+# Giscus 评论配置（需要用户在 GitHub 上配置后填入）
+[params.giscus]
+  repo = "shizhu/shizhu.github.io"  # 修改为你的仓库
+  repoId = ""  # 从 Giscus 获取
+  category = "Announcements"
+  categoryId = ""  # 从 Giscus 获取
+  mapping = "pathname"
+  strict = "0"
+  reactionsEnabled = "1"
+  emitMetadata = "0"
+  inputPosition = "bottom"
+  theme = "preferred_color_scheme"
+  lang = "zh-CN"
+  crossorigin = "anonymous"
+
+# Markdown 配置
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # 允许 HTML
+  
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
+
+# 输出格式
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+
+# 分页
+[pagination]
+  pagerSize = 7
+
+# 图片处理
+[imaging]
+  quality = 85
+  resampleFilter = "Lanczos"
