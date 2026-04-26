@@ -9,7 +9,7 @@ description: "三言二语的第一次问候"
 
 ## 欢迎来到三言二语
 
-这是石柱的个人网站，使用 Hugo + GitHub Pages 搭建。
+这是个人网站，使用 Hugo + GitHub Pages 搭建。
 
 ### 为什么叫"三言二语"？
 

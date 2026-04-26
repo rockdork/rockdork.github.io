@@ -1,12 +1,12 @@
-# 三言二鱼 - 石柱的个人网站
+# 三言二鱼
 baseURL = 'https://rockdork.github.io/'
 languageCode = 'zh-CN'
 title = '三言二鱼'
 theme = 'PaperMod'
 
 # 基本配置
-author = '石柱'
-description = '石柱的个人网站'
+author = ''
+description = '记录思考与发现'
 summaryLength = 50
 
 # 外观设置
@@ -23,26 +23,9 @@ summaryLength = 50
 
   [params.homeInfoParams]
     Title = '三言二鱼'
-    Content = '石柱的个人空间，记录思考与发现。'
+    Content = '记录思考与发现'
 
-  [params.profileMode]
-    enabled = true
-    title = "石柱"
-    subtitle = "思考者 | 记录者"
-    imageUrl = "img/profile.jpg"
-    imageTitle = "我的头像"
-    imageWidth = 120
-    imageHeight = 120
-
-    [[params.profileMode.buttons]]
-      name = "博客"
-      url = "/posts"
-    [[params.profileMode.buttons]]
-      name = "标签"
-      url = "/tags"
-    [[params.profileMode.buttons]]
-      name = "关于"
-      url = "/about"
+  mainSections = ["posts"]
 
 # 菜单
 [[menu.main]]
