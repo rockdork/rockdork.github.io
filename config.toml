@@ -5,26 +5,26 @@ title = '三言二鱼'
 theme = 'PaperMod'
 
 # 基本配置
-description = '记录思考与发现'
-summaryLength = 50
+description = '三言两语，记录真实思考'
+summaryLength = 80
 
 # 外观设置
 [params]
-  defaultTheme = 'dark'
+  defaultTheme = 'light'
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
-  ShowBreadCrumbs = true
+  ShowBreadCrumbs = false
   ShowCodeCopyButtons = true
   ShowWordCount = false
-  ShowRssButton = true
+  ShowRssButton = false
   ShowTaxonomies = true
   ShowToc = true
   TocOpen = false
 
   # 首页信息
   [params.homeInfoParams]
-    Title = '三言二鱼 🐟'
+    Title = '三言二鱼'
     Content = '三言两语，记录真实思考'
 
   mainSections = ["posts"]
@@ -43,12 +43,6 @@ summaryLength = 50
     threshold = 0.4
     minMatchCharLength = 0
     keys = ["title", "permalink", "summary", "content"]
-
-  # 编辑链接（可选）
-  [params.editPost]
-    URL = "https://github.com/rockdork/rockdork.github.io/tree/main/content"
-    Text = "建议修改"
-    appendFilePath = true
 
 # 菜单
 [[menu.main]]
@@ -81,7 +75,7 @@ summaryLength = 50
     [markup.goldmark.renderer]
       unsafe = true
   [markup.highlight]
-    style = "dracula"
+    style = "monokailight"
     lineNos = false
     codeFences = true
     guessSyntax = true
@@ -90,7 +84,7 @@ summaryLength = 50
     ordered = false
     startLevel = 2
 
-# 输出格式（含搜索页）
+# 输出格式
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
