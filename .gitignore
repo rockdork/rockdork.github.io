@@ -1,3 +1,34 @@
+# Hugo 构建产物
 public/
 resources/
 .hugo_build.lock
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# 编辑器 / IDE
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-*
+
+# Node（如果未来加 JS 工具链）
+node_modules/
+package-lock.json
+
+# 环境变量 / 密钥
+.env
+.env.*
+
+# 旧主题（已弃用 PaperMod，不再需要）
+themes/
+
+# 旧 CSS 覆盖（已迁移到 assets/css/core/ 和 common/）
+assets/css/extended/
