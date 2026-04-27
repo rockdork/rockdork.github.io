@@ -1,0 +1,66 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{{- if hugo.IsProduction }}
+<meta name="robots" content="index, follow">
+{{- else }}
+<meta name="robots" content="noindex, nofollow">
+{{- end }}
+
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+
+{{- with .Description }}
+<meta name="description" content="{{ . }}">
+{{- else }}
+<meta name="description" content="{{ site.Params.description }}">
+{{- end }}
+
+<meta name="author" content="{{ site.Params.author }}">
+<link rel="canonical" href="{{ .Permalink }}">
+
+<!-- CSS -->
+{{- $vars := resources.Get "css/core/variables.css" }}
+{{- $reset := resources.Get "css/core/reset.css" }}
+{{- $layout := resources.Get "css/core/layout.css" }}
+{{- $post := resources.Get "css/common/post.css" }}
+{{- $stylesheet := slice $vars $reset $layout $post | resources.Concat "css/bundle.css" | resources.Minify }}
+<link rel="stylesheet" href="{{ $stylesheet.RelPermalink }}">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="icon" href="{{ "favicon.ico" | absURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | absURL }}">
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}">
+<meta name="theme-color" content="#C44536">
+
+<!-- RSS -->
+{{ range .AlternativeOutputFormats -}}
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" title="{{ .Name }}">
+{{ end -}}
+
+<!-- Theme toggle (runs before paint) -->
+<script>
+(function() {
+    var pref = localStorage.getItem("pref-theme");
+    if (pref === "dark") {
+        document.documentElement.dataset.theme = "dark";
+    } else if (pref === "light") {
+        document.documentElement.dataset.theme = "light";
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.dataset.theme = "dark";
+    }
+})();
+</script>
+
+<!-- Search -->
+{{- if eq .Layout "search" }}
+<link rel="preload" as="fetch" href="../index.json">
+{{- $fuse := resources.Get "js/fuse.basic.min.js" }}
+{{- $search := resources.Get "js/fastsearch.js" | js.Build (dict "params" (dict "fuseOpts" site.Params.fuseOpts)) | resources.Minify }}
+{{- $searchBundle := slice $fuse $search | resources.Concat "js/search.js" }}
+<script defer src="{{ $searchBundle.RelPermalink }}"></script>
+{{- end }}

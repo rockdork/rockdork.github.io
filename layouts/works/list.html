@@ -1,0 +1,77 @@
+{{- define "main" }}
+
+<header class="page-header">
+    <h1>{{ .Title }}</h1>
+</header>
+
+{{ .Content }}
+
+<div class="works-page">
+    {{/* 长篇小说 */}}
+    <div class="works-category">
+        <h2 class="works-category-title">📝 长篇小说</h2>
+        <div class="works-grid">
+            <a class="works-card" href="#">
+                <div class="works-card-header">
+                    <h3>信仰抉择</h3>
+                    <span class="works-status">连载中</span>
+                </div>
+                <p class="works-desc">军旅题材。交出证据是叛徒，不交同类悲剧重演——一个关于信仰与抉择的故事。</p>
+                <div class="works-tags">
+                    <span class="works-tag">军旅</span>
+                    <span class="works-tag">悬疑</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    {{/* 公众号 */}}
+    <div class="works-category">
+        <h2 class="works-category-title">✍️ 公众号</h2>
+        <div class="works-grid">
+            <a class="works-card" href="#">
+                <div class="works-card-header">
+                    <h3>三言二鱼</h3>
+                    <span class="works-status">持续更新</span>
+                </div>
+                <p class="works-desc">三言两语，鱼游深水。简短记录，但不止于表面。</p>
+                <div class="works-tags">
+                    <span class="works-tag">个人成长</span>
+                    <span class="works-tag">感悟</span>
+                    <span class="works-tag">写作</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    {{/* 项目 */}}
+    <div class="works-category">
+        <h2 class="works-category-title">🛠️ 项目</h2>
+        <div class="works-grid">
+            <a class="works-card" href="#">
+                <div class="works-card-header">
+                    <h3>四两</h3>
+                    <span class="works-status">运行中</span>
+                </div>
+                <p class="works-desc">AI 秘书 Agent，基于 OpenClaw 构建。管理写作、资讯、灵感等多个自动化任务流。</p>
+                <div class="works-tags">
+                    <span class="works-tag">AI Agent</span>
+                    <span class="works-tag">自动化</span>
+                </div>
+            </a>
+            <a class="works-card" href="#">
+                <div class="works-card-header">
+                    <h3>章章</h3>
+                    <span class="works-status">运行中</span>
+                </div>
+                <p class="works-desc">男频网文写作 Agent，由四两管理。专注网文写作技巧拆解与创作灵感生成。</p>
+                <div class="works-tags">
+                    <span class="works-tag">AI Agent</span>
+                    <span class="works-tag">网文写作</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+{{- end }}

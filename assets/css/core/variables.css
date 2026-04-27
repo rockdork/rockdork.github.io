@@ -1,0 +1,55 @@
+/* ===== 三言二鱼 · 设计令牌 ===== */
+
+:root {
+  /* 亮色 · 暖纸 */
+  --bg-primary: #F5F1EB;
+  --bg-secondary: #E8E3DA;
+  --bg-card: #FAF8F5;
+  --text-primary: #2C2A26;
+  --text-secondary: #6B655E;
+  --text-tertiary: #9A958F;
+  --accent: #C44536;
+  --accent-hover: #A8382A;
+  --border: #D4CFC7;
+  --border-light: #E5E0D8;
+  --shadow: 0 6px 20px rgba(44, 42, 38, 0.08);
+  --shadow-hover: 0 8px 24px rgba(44, 42, 38, 0.12);
+  --code-bg: #EDE8DF;
+  --code-block-bg: #F0ECE4;
+
+  /* 布局 */
+  --nav-width: 1024px;
+  --main-width: 720px;
+  --gap: 24px;
+  --content-gap: 20px;
+  --header-height: 60px;
+  --radius: 10px;
+  --radius-sm: 6px;
+
+  /* 字体 */
+  --font-serif: 'Noto Serif SC', 'Noto Serif', Georgia, serif;
+  --font-sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  color-scheme: light;
+}
+
+/* 暗色 · 暖黑 */
+[data-theme="dark"] {
+  --bg-primary: #1A1917;
+  --bg-secondary: #252320;
+  --bg-card: #2A2826;
+  --text-primary: #E8E3DA;
+  --text-secondary: #A39E95;
+  --text-tertiary: #7A756D;
+  --accent: #E05A4B;
+  --accent-hover: #F06B5C;
+  --border: #3D3A36;
+  --border-light: #33302C;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --code-bg: #2E2B28;
+  --code-block-bg: #252320;
+
+  color-scheme: dark;
+}

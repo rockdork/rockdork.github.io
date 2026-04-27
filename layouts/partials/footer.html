@@ -1,0 +1,77 @@
+<footer class="site-footer">
+    <span>&copy; {{ now.Year }} <a href="{{ "/" | absURL }}">{{ site.Title }}</a></span>
+    <span> · </span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo</a></span>
+</footer>
+
+<a href="#top" id="back-to-top" class="back-to-top" aria-label="回到顶部">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+// Theme toggle
+document.getElementById("theme-toggle").addEventListener("click", function() {
+    var html = document.documentElement;
+    if (html.dataset.theme === "dark") {
+        html.dataset.theme = "light";
+        localStorage.setItem("pref-theme", "light");
+    } else {
+        html.dataset.theme = "dark";
+        localStorage.setItem("pref-theme", "dark");
+    }
+});
+
+// Back to top
+var topBtn = document.getElementById("back-to-top");
+window.addEventListener("scroll", function() {
+    if (window.scrollY > window.innerHeight) {
+        topBtn.classList.add("visible");
+    } else {
+        topBtn.classList.remove("visible");
+    }
+});
+
+// Code copy
+document.querySelectorAll("pre > code").forEach(function(block) {
+    var btn = document.createElement("button");
+    btn.className = "copy-code";
+    btn.textContent = "复制";
+    btn.addEventListener("click", function() {
+        navigator.clipboard.writeText(block.textContent).then(function() {
+            btn.textContent = "已复制";
+            setTimeout(function() { btn.textContent = "复制"; }, 2000);
+        });
+    });
+    block.parentNode.appendChild(btn);
+});
+</script>
+
+<style>
+.copy-code {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-light);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+pre:hover .copy-code {
+    opacity: 1;
+}
+.copy-code:hover {
+    color: var(--accent);
+    border-color: var(--border);
+}
+pre {
+    position: relative;
+}
+</style>
