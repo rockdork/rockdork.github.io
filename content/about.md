@@ -14,7 +14,7 @@ layout: "about"
 ## 这个网站
 
 - 使用 [Hugo](https://gohugo.io/) 构建
-- 自写模板与样式
+- 主题 [PaperMod](https://github.com/adityatelange/hugo-PaperMod)
 - 托管在 [GitHub Pages](https://pages.github.com/)
 
 ## 联系
