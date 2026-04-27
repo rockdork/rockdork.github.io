@@ -5,29 +5,58 @@ title = '三言二鱼'
 theme = 'PaperMod'
 
 # 基本配置
-author = ''
 description = '记录思考与发现'
 summaryLength = 50
 
 # 外观设置
 [params]
-  defaultTheme = 'auto'
+  defaultTheme = 'dark'
   ShowReadingTime = true
-  ShowShareButtons = true
+  ShowShareButtons = false
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
-  ShowWordCount = true
+  ShowWordCount = false
   ShowRssButton = true
   ShowTaxonomies = true
+  ShowToc = true
+  TocOpen = false
 
+  # 首页信息
   [params.homeInfoParams]
-    Title = '三言二鱼'
-    Content = '记录思考与发现'
+    Title = '三言二鱼 🐟'
+    Content = '三言两语，记录真实思考'
 
   mainSections = ["posts"]
 
+  # 社交图标
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/rockdork"
+
+  # 搜索
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
+  # 编辑链接（可选）
+  [params.editPost]
+    URL = "https://github.com/rockdork/rockdork.github.io/tree/main/content"
+    Text = "建议修改"
+    appendFilePath = true
+
 # 菜单
+[[menu.main]]
+  identifier = "search"
+  name = "🔍"
+  url = "/search/"
+  weight = 0
+
 [[menu.main]]
   identifier = "posts"
   name = "博客"
@@ -51,18 +80,23 @@ summaryLength = 50
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+  [markup.highlight]
+    style = "dracula"
+    lineNos = false
+    codeFences = true
+    guessSyntax = true
   [markup.tableOfContents]
     endLevel = 3
     ordered = false
     startLevel = 2
 
-# 输出格式
+# 输出格式（含搜索页）
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
 # 分页
 [pagination]
-  pagerSize = 7
+  pagerSize = 10
 
 # 图片处理
 [imaging]

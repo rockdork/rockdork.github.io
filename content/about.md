@@ -1,24 +1,22 @@
 ---
 title: "关于"
-date: 2026-04-26
+date: 2026-04-27
 draft: false
+layout: "about"
 ---
 
-## 关于
+## 关于这里
 
+「三言二鱼」是一个个人博客，记录思考、发现与创作。
 
-### 这个网站
+主题很简单：少说废话，多留真意。
 
-- **技术栈**: Hugo + GitHub Pages
-- **主题**: PaperMod
-- **内容**: 博客文章、思考笔记
+## 这个网站
 
-### 联系方式
+- 使用 [Hugo](https://gohugo.io/) 构建
+- 主题 [PaperMod](https://github.com/adityatelange/hugo-PaperMod)
+- 托管在 [GitHub Pages](https://pages.github.com/)
 
-- GitHub: [shizhu](https://github.com/shizhu)
-- 邮箱: (待补充)
+## 联系
 
-### 网站历史
-
-- 2026-04-26: 网站搭建完成
-- 待办: 迁移公众号文章
+- GitHub: [rockdork](https://github.com/rockdork)
