@@ -11,7 +11,7 @@ summaryLength = 80
 # 外观设置
 [params]
   defaultTheme = 'light'
-  ShowReadingTime = true
+  ShowReadingTime = false
   ShowShareButtons = false
   ShowPostNavLinks = true
   ShowBreadCrumbs = false
