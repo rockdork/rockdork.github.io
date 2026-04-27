@@ -303,3 +303,40 @@ pre code {
 .post-nav a:hover {
   color: var(--accent) !important;
 }
+
+/* --- 列表页/归档页标题 --- */
+.page-header h1 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.page-header {
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --- 归档年份标题 --- */
+.archive-year {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.archive-month {
+  color: var(--text-secondary);
+}
+
+.archive-entry {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* --- 404 页 --- */
+.not-found {
+  font-family: 'Noto Serif SC', serif;
+  color: var(--text-tertiary);
+}
