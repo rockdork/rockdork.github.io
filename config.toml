@@ -22,6 +22,8 @@ summaryLength = 80
   ShowToc = true
   TocOpen = false
 
+  DateFormat = '2006/01/02'
+
   # 首页信息
   [params.homeInfoParams]
     Title = '三言二鱼'
