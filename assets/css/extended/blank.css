@@ -340,3 +340,86 @@ pre code {
   font-family: 'Noto Serif SC', serif;
   color: var(--text-tertiary);
 }
+
+/* ===== 作品页 ===== */
+.works-category {
+  margin-bottom: 2.5rem;
+}
+
+.works-category-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.works-card {
+  display: block;
+  background: var(--entry);
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  padding: 1.2rem 1.4rem;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.works-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(44, 42, 38, 0.08);
+  border-color: var(--border);
+}
+
+.works-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.works-card-header h3 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.works-status {
+  font-size: 0.75rem;
+  color: var(--accent);
+  background: rgba(196, 69, 54, 0.08);
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.works-desc {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0 0 0.8rem 0;
+}
+
+.works-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.works-tag {
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  background: var(--bg-secondary);
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+}
