@@ -288,53 +288,23 @@ pre code {
   color: var(--text-primary);
 }
 
-/* --- 文章标签（与作品页 works-tag 统一风格）--- */
-.post-header .post-tags {
-  margin-top: 0.5rem;
-}
-
-.post-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.post-tags li {
-  margin: 0;
-}
-
-.post-tags a {
-  display: inline-flex;
-  align-items: center;
-  font-size: 0.78rem;
+/* --- 文章标签（行内，与日期同行）--- */
+.post-header .post-tags-inline a {
   color: var(--text-tertiary);
-  background: var(--bg-secondary);
-  border-radius: 4px;
-  padding: 0.15rem 0.55rem;
+  font-size: 0.85rem;
   text-decoration: none;
-  transition: all 0.2s ease;
-  line-height: 1.5;
+  margin-right: 0.4rem;
+  transition: color 0.2s ease;
 }
 
-.post-tags a::before {
-  content: '#';
-  margin-right: 0.15em;
+.post-header .post-tags-inline a:hover {
+  color: var(--accent);
+}
+
+.meta-separator {
   color: var(--text-tertiary);
-  font-weight: 500;
-  opacity: 0.6;
-}
-
-.post-tags a:hover {
-  color: white !important;
-  background: var(--accent);
-}
-
-.post-tags a:hover::before {
-  color: rgba(255, 255, 255, 0.7);
-  opacity: 1;
+  margin: 0 0.3rem;
+  opacity: 0.5;
 }
 
 /* --- 链接 --- */
