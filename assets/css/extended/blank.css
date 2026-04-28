@@ -289,6 +289,10 @@ pre code {
 }
 
 /* --- 文章标签（与作品页 works-tag 统一风格）--- */
+.post-header .post-tags {
+  margin-top: 0.5rem;
+}
+
 .post-tags {
   display: flex;
   flex-wrap: wrap;
