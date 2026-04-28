@@ -19,7 +19,7 @@ summaryLength = 80
   ShowWordCount = false
   ShowRssButton = false
   ShowTaxonomies = true
-  ShowToc = true
+  ShowToc = false
   TocOpen = false
 
   DateFormat = '2006/01/02'
