@@ -27,8 +27,6 @@ package-lock.json
 .env
 .env.*
 
-# 旧主题（已弃用 PaperMod，不再需要）
-themes/
-
-# 旧 CSS 覆盖（已迁移到 assets/css/core/ 和 common/）
-assets/css/extended/
+# 旧 CSS 核心（已迁移回 extended/blank.css）
+assets/css/core/
+assets/css/common/
