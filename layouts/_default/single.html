@@ -14,11 +14,7 @@
       </span>
       {{- end }}
     </h1>
-    {{- if .Description }}
-    <div class="post-description">
-      {{ .Description }}
-    </div>
-    {{- end }}
+    {{- /* description 不在文章详情页显示 */}}
     {{- if not (.Param "hideMeta") }}
     <div class="post-meta">
       {{- partial "post_meta.html" . -}}
