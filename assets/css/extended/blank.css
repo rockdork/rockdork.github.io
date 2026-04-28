@@ -288,6 +288,51 @@ pre code {
   color: var(--text-primary);
 }
 
+/* --- 文章标签 --- */
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-tags li {
+  margin: 0;
+}
+
+.post-tags a {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--warm-border-light);
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  line-height: 1.5;
+}
+
+.post-tags a::before {
+  content: '#';
+  margin-right: 0.15em;
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+.post-tags a:hover {
+  color: white !important;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.post-tags a:hover::before {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 /* --- 链接 --- */
 .post-content a {
   color: var(--accent);
