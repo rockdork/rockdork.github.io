@@ -1,0 +1,565 @@
+/* ===== 三言二鱼 · 暖色纸张风格 ===== */
+/* 灵感来自 gudong.site 的温暖纸感美学 */
+
+/* --- 字体 --- */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+:root {
+  /* 暖色纸张调色板 */
+  --bg-primary: #F5F1EB;
+  --bg-secondary: #E8E3DA;
+  --bg-card: #FAF8F5;
+  --text-primary: #2C2A26;
+  --text-secondary: #6B655E;
+  --text-tertiary: #9A958F;
+  --accent: #C44536;
+  --accent-hover: #A8382A;
+  --warm-border: #D4CFC7;
+  --warm-border-light: #E5E0D8;
+  --warm-shadow: rgba(44, 42, 38, 0.08);
+
+  /* 覆盖 PaperMod 变量 */
+  --theme: #F5F1EB;
+  --entry: #FAF8F5;
+  --primary: #2C2A26;
+  --secondary: #6B655E;
+  --tertiary: #E8E3DA;
+  --content: #3A3833;
+  --code-block-bg: #F0ECE4;
+  --code-bg: #EDE8DF;
+  --border: #D4CFC7;
+}
+
+/* ===== 暗色模式 · 暖调深色 ===== */
+[data-theme="dark"] {
+  --bg-primary: #1A1917;
+  --bg-secondary: #252320;
+  --bg-card: #2A2826;
+  --text-primary: #E8E3DA;
+  --text-secondary: #A39E95;
+  --text-tertiary: #7A756D;
+  --accent: #E05A4B;
+  --accent-hover: #F06B5C;
+  --warm-border: #3D3A36;
+  --warm-border-light: #33302C;
+  --warm-shadow: rgba(0, 0, 0, 0.25);
+
+  --theme: #1A1917;
+  --entry: #252320;
+  --primary: #E8E3DA;
+  --secondary: #A39E95;
+  --tertiary: #33302C;
+  --content: #C8C3BB;
+  --code-block-bg: #252320;
+  --code-bg: #2E2B28;
+  --border: #3D3A36;
+}
+
+/* --- 全局 --- */
+body {
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--content);
+  background: var(--theme);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- 导航 --- */
+.header {
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--warm-border-light);
+}
+
+.logo a {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--text-primary) !important;
+}
+
+.menu a {
+  color: var(--text-secondary) !important;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.menu a:hover {
+  color: var(--accent) !important;
+}
+
+/* --- 首页标题 --- */
+.first-entry .entry-header h1 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.first-entry .entry-content p {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  margin-top: 0.4rem;
+  line-height: 1.8;
+}
+
+/* --- 文章卡片 --- */
+.post-entry {
+  background: var(--entry);
+  border: 1px solid var(--warm-border-light);
+  border-radius: 10px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  margin-bottom: 1rem;
+}
+
+.post-entry:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px var(--warm-shadow);
+  border-color: var(--warm-border);
+}
+
+.post-entry .entry-header h2 {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.post-entry .entry-content {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.post-entry .entry-footer {
+  color: var(--text-tertiary);
+  font-size: 0.82rem;
+}
+
+/* --- 文章内页 --- */
+.post-single .post-title {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+.post-single .post-meta {
+  color: var(--text-tertiary);
+}
+
+.post-single .post-content {
+  font-size: 1.02rem;
+  line-height: 1.9;
+  color: var(--content);
+}
+
+.post-single .post-content h2,
+.post-single .post-content h3 {
+  font-family: 'Noto Serif SC', serif;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* --- 引用块 --- */
+.post-content blockquote {
+  border-left: 3px solid var(--accent);
+  background: var(--bg-card);
+  padding: 0.8rem 1.2rem;
+  margin: 1.5rem 0;
+  border-radius: 0 6px 6px 0;
+  color: var(--text-secondary);
+  font-style: normal;
+}
+
+.post-content blockquote p {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* --- 代码块 --- */
+.highlight {
+  border-radius: 8px;
+  margin: 1.2rem 0;
+  border: 1px solid var(--warm-border-light);
+  background: var(--code-block-bg) !important;
+}
+
+code {
+  background: var(--code-bg);
+  border-radius: 3px;
+  padding: 0.15em 0.4em;
+  font-size: 0.88em;
+  color: var(--accent);
+}
+
+pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+}
+
+/* --- 标签 --- */
+.terms-tags a,
+.tag-cloud-tags a {
+  background: var(--entry);
+  border: 1px solid var(--warm-border-light);
+  border-radius: 6px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+
+.terms-tags a:hover,
+.tag-cloud-tags a:hover {
+  background: var(--accent);
+  color: white !important;
+  border-color: var(--accent);
+}
+
+/* --- 页脚 --- */
+.footer {
+  font-size: 0.82rem;
+  color: var(--text-tertiary);
+  border-top: 1px solid var(--warm-border-light);
+  padding-top: 1.5rem;
+  margin-top: 3rem;
+}
+
+.footer a {
+  color: var(--text-secondary);
+}
+
+.footer a:hover {
+  color: var(--accent);
+}
+
+/* --- 目录 --- */
+.toc {
+  background: var(--entry);
+  border: 1px solid var(--warm-border-light);
+  border-radius: 8px;
+  font-size: 0.88rem;
+}
+
+.toc a {
+  color: var(--text-secondary) !important;
+}
+
+.toc a:hover {
+  color: var(--accent) !important;
+}
+
+/* --- 搜索框 --- */
+#searchInput {
+  border: 1px solid var(--warm-border);
+  border-radius: 8px;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 1.05rem;
+  padding: 0.7rem 1rem;
+  background: var(--entry);
+  color: var(--text-primary);
+}
+
+#searchInput:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(196, 69, 54, 0.1);
+}
+
+/* --- 关于页 --- */
+.post-content p {
+  line-height: 1.9;
+}
+
+/* --- 选中文字颜色 --- */
+::selection {
+  background: rgba(196, 69, 54, 0.15);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] ::selection {
+  background: rgba(224, 90, 75, 0.25);
+  color: var(--text-primary);
+}
+
+/* --- 链接 --- */
+.post-content a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.post-content a:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* --- 主题切换按钮 --- */
+.theme-toggle {
+  color: var(--text-secondary);
+}
+
+/* --- 滚动条美化 --- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--warm-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+
+/* --- 上一条/下一条导航 --- */
+.post-nav a {
+  color: var(--text-secondary) !important;
+  font-size: 0.92rem;
+}
+
+.post-nav a:hover {
+  color: var(--accent) !important;
+}
+
+/* --- 列表页/归档页标题 --- */
+.page-header h1 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.page-header {
+  border-bottom: 1px solid var(--warm-border-light);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --- 归档年份/月份 --- */
+.archive-year {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.archive-month {
+  color: var(--text-secondary);
+}
+
+.archive-entry {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--warm-border-light);
+}
+
+/* --- 404 页 --- */
+.not-found {
+  font-family: 'Noto Serif SC', serif;
+  color: var(--text-tertiary);
+}
+
+/* ===== 作品页 ===== */
+.works-category {
+  margin-bottom: 2.5rem;
+}
+
+.works-category-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--warm-border-light);
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.works-card {
+  display: block;
+  background: var(--entry);
+  border: 1px solid var(--warm-border-light);
+  border-radius: 10px;
+  padding: 1.2rem 1.4rem;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.works-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px var(--warm-shadow);
+  border-color: var(--warm-border);
+}
+
+.works-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.works-card-header h3 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.works-status {
+  font-size: 0.75rem;
+  color: var(--accent);
+  background: rgba(196, 69, 54, 0.08);
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+[data-theme="dark"] .works-status {
+  background: rgba(224, 90, 75, 0.12);
+}
+
+.works-desc {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0 0 0.8rem 0;
+}
+
+.works-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.works-tag {
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  background: var(--bg-secondary);
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+}
+
+/* ===== 暗色模式深度适配 ===== */
+
+/* 暗色下文章内标题下划线 */
+[data-theme="dark"] .post-content h2 {
+  border-bottom-color: var(--warm-border);
+}
+
+/* 暗色下表格 */
+[data-theme="dark"] .post-content table {
+  border-color: var(--warm-border);
+}
+
+[data-theme="dark"] .post-content th {
+  background: var(--bg-secondary);
+  border-color: var(--warm-border);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .post-content td {
+  border-color: var(--warm-border);
+}
+
+/* 暗色下 hr */
+[data-theme="dark"] .post-content hr {
+  background: var(--warm-border);
+}
+
+/* 暗色下面包屑 */
+[data-theme="dark"] .breadcrumbs {
+  color: var(--text-tertiary);
+}
+
+/* 暗色下搜索结果 */
+[data-theme="dark"] #searchResults li {
+  border-bottom-color: var(--warm-border-light);
+}
+
+/* 暗色下回到顶部按钮 */
+[data-theme="dark"] .top-link {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+/* 暗色下 meta 信息（日期、阅读时间等） */
+[data-theme="dark"] .post-meta {
+  color: var(--text-tertiary) !important;
+}
+
+/* 暗色下分类/标签页头部 */
+[data-theme="dark"] .taxonomy-page .page-header {
+  border-bottom-color: var(--warm-border-light);
+}
+
+/* 暗色下文章列表日期 */
+[data-theme="dark"] .entry-footer span {
+  color: var(--text-tertiary);
+}
+
+/* 暗色下关键词标签 */
+[data-theme="dark"] .post-tags a {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--warm-border-light);
+}
+
+[data-theme="dark"] .post-tags a:hover {
+  background: var(--accent);
+  color: white !important;
+  border-color: var(--accent);
+}
+
+/* 暗色下分割线统一 */
+[data-theme="dark"] .single .post-footer {
+  border-top-color: var(--warm-border-light);
+}
+
+[data-theme="dark"] .list .post-entry + .post-entry {
+  border-top-color: var(--warm-border-light);
+}
+
+/* 暗色下评论系统背景适配 */
+[data-theme="dark"] .giscus-frame {
+  filter: brightness(0.95);
+}
+
+/* 暗色下图片轻微压暗，避免刺眼 */
+[data-theme="dark"] .post-content img {
+  opacity: 0.92;
+  transition: opacity 0.2s;
+}
+
+[data-theme="dark"] .post-content img:hover {
+  opacity: 1;
+}
+
+/* 暗色下回到顶部按钮优化 */
+[data-theme="dark"] #top-link {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--warm-border-light);
+}
+
+/* 暗色下导航 active 状态 */
+[data-theme="dark"] .menu .active {
+  color: var(--text-primary) !important;
+}
