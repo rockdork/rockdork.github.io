@@ -51,9 +51,11 @@ summaryLength = 80
 # 菜单
 [[menu.main]]
   identifier = "search"
-  name = "🔍"
+  name = "搜索"
   url = "/search/"
   weight = 0
+  [menu.main.params]
+    icon = true
 
 [[menu.main]]
   identifier = "posts"
