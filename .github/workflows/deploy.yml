@@ -40,7 +40,9 @@ jobs:
       - name: Merge content into site
         run: |
           rm -rf content
+          mkdir -p content
           cp -r content-private/* content/
+          cp content-private/.gitignore content/ 2>/dev/null || true
           rm -rf content-private
 
       - name: Setup Hugo
