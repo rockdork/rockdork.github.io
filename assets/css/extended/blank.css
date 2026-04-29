@@ -589,8 +589,8 @@ pre code {
   align-items: center;
   justify-content: center;
   font-size: 0;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
 }
 #menu a[href*="/search/"] span::before {
   content: '';
