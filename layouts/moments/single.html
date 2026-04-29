@@ -1,6 +1,6 @@
 {{ define "main" }}
 <main class="moment-single">
-  {{ with .Params.cover }}
+  {{ with .Params.featured_image }}
   <div class="moment-hero">
     <img src="{{ . | relURL }}" alt="{{ $.Title }}">
   </div>

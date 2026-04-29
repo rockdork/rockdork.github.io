@@ -727,3 +727,72 @@ pre code {
   align-items: center;
   min-height: 120px;
 }
+
+/* ===== 动态风格对齐博客统一规范 ===== */
+
+/* 卡片整体 - 对齐 .post-entry */
+.moment-card {
+  margin-bottom: 1rem;
+}
+
+/* 元信息区域 - 对齐 .entry-header + .entry-footer */
+.moment-meta {
+  padding: 1rem 1.2rem 1rem;
+}
+
+/* 标题 - 对齐 .post-entry .entry-header h2 */
+.moment-title {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+  margin: 0 0 0.3rem 0;
+}
+
+/* 日期 - 对齐 .entry-footer */
+.moment-meta time {
+  font-size: 0.82rem;
+  color: var(--text-tertiary);
+}
+
+/* 无图卡片 - 对齐普通文章卡片高度 */
+.moment-card.no-cover {
+  min-height: auto;
+}
+
+.moment-card.no-cover .moment-meta {
+  padding: 1.2rem 1.2rem;
+}
+
+/* 详情页 - 对齐 .post-single */
+.moment-single {
+  max-width: 720px;
+}
+
+.moment-single-header h1 {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.4;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem 0;
+}
+
+.moment-single-header time {
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+}
+
+.moment-content {
+  font-size: 1.02rem;
+  line-height: 1.9;
+  color: var(--content);
+  margin-top: 1.5rem;
+}
+
+/* 详情页大图 - 对齐文章图片风格 */
+.moment-single-cover {
+  border-radius: 10px;
+  margin: 1.5rem 0;
+}
