@@ -25,7 +25,7 @@ summaryLength = 80
   DateFormat = '2006/01/02'
 
   # 首页直接显示文章列表
-
+  disableSpecial1stPost = true
   mainSections = ["posts"]
 
   # 资源配色
