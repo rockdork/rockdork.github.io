@@ -2,7 +2,7 @@
 title: "送葬"
 date: 2025-04-23T10:00:00+08:00
 draft: false
-tags: ["自由生长"]
+tags: ["自在生长"]
 description: "乡下的葬礼，生死的平常"
 ---
 
