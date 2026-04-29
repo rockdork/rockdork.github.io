@@ -1,22 +1,11 @@
 {{- if gt .TotalPages 1 -}}
 <nav class="pagination">
   {{- if .HasPrev -}}
-  <a href="{{ .Prev.URL }}" class="pagination-item pagination-prev" aria-label="上一页">← 上一页</a>
+  <a href="{{ .Prev.URL }}">← 上一页</a>
   {{- end -}}
-
-  {{- $currentPage := .PageNumber -}}
-
-  {{- range .Pagers -}}
-    {{- $pageNum := .PageNumber -}}
-    {{- if eq $pageNum $currentPage -}}
-    <span class="pagination-item pagination-active">{{ $pageNum }}</span>
-    {{- else -}}
-    <a href="{{ .URL }}" class="pagination-item pagination-num">{{ $pageNum }}</a>
-    {{- end -}}
-  {{- end -}}
-
+  <span>第 {{ .PageNumber }} 页 / 共 {{ .TotalPages }} 页</span>
   {{- if .HasNext -}}
-  <a href="{{ .Next.URL }}" class="pagination-item pagination-next" aria-label="下一页">下一页 →</a>
+  <a href="{{ .Next.URL }}">下一页 →</a>
   {{- end -}}
 </nav>
 {{- end -}}
