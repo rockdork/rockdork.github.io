@@ -38,6 +38,7 @@
 
 ### 2.3 作品页（Works）
 - 路径：`/works/`
+- 只保留公众号「三言二鱼」入口，无其他作品
 - 自定义模板：`layouts/works/single.html`
 
 ### 2.4 关于页（About）

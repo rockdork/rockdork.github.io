@@ -1,6 +1,6 @@
 # 三言二鱼网站 — 技术文档
 
-> 最后更新：2026-04-29
+> 最后更新：2026-04-29（作品页精简）
 > 维护人：四两
 
 ---
@@ -27,14 +27,14 @@ rockdorky-blog/
 │   ├── moments/        # 动态列表（小红书风格，独立 section）
 │   │   ├── _index.md   # section 首页必需文件
 │   │   └── *.md        # 动态内容
-│   ├── works/          # 作品页
+│   ├── works.md        # 作品页（仅保留公众号「三言二鱼」入口）
 │   └── about.md        # 关于页（无 date 字段）
 ├── layouts/
 │   ├── moments/
 │   │   ├── list.html   # 动态列表页模板（CSS Grid 卡片）
 │   │   └── single.html # 动态详情页模板（沉浸式视图）
 │   ├── works/
-│   │   └── single.html # 作品页模板
+│   │   └── single.html # 作品页模板（仅公众号入口）
 │   └── _default/
 │       └── single.html # 覆盖默认文章模板（标签与日期同行）
 ├── assets/css/extended/
