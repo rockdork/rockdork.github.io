@@ -589,7 +589,18 @@ pre code {
 /* ===== 动态列表（Moments）===== */
 .moments-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  /* 确保≥760px时至少3列 */
+}
+@media (min-width: 760px) {
+  .moments-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 759px) {
+  .moments-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
   gap: 1.2rem;
   margin-top: 1.5rem;
 }
@@ -619,13 +630,35 @@ pre code {
   aspect-ratio: 16 / 9;
   overflow: hidden;
   background: var(--bg-secondary);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .moment-cover img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* 图片加载失败 → 隐藏图片，展示优雅占位 */
+.moment-cover img[src*="sample"] {
+  opacity: 0;
+}
+
+/* 图片加载失败 → 优雅占位 */
+.moment-cover.cover-fallback {
+  background: var(--bg-secondary);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24' fill='none' stroke='%239A958F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='18' height='18' rx='2'/%3E%3Ccircle cx='8.5' cy='8.5' r='1.5'/%3E%3Cpath d='m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 48px;
+}
+
+.moment-cover.cover-fallback img {
+  display: none;
 }
 
 .moment-card:hover .moment-cover img {
@@ -795,4 +828,62 @@ pre code {
 .moment-single-cover {
   border-radius: 10px;
   margin: 1.5rem 0;
+}
+
+/* ===== 分页器 · 简约暖色风格 ===== */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2.5rem;
+  padding: 1rem 0 2rem;
+}
+
+.pagination-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.2rem;
+  height: 2.2rem;
+  padding: 0 0.6rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-family: 'Noto Sans SC', sans-serif;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.pagination-item:hover {
+  color: var(--accent);
+  background: var(--bg-secondary);
+  border-color: var(--warm-border-light);
+}
+
+.pagination-active {
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+  font-weight: 500;
+  cursor: default;
+}
+
+.pagination-prev,
+.pagination-next {
+  font-size: 0.85rem;
+  padding: 0 0.8rem;
+}
+
+[data-theme="dark"] .pagination-item:hover {
+  color: var(--accent-hover);
+  background: var(--bg-secondary);
+  border-color: var(--warm-border-light);
+}
+
+[data-theme="dark"] .pagination-active {
+  color: var(--bg-primary);
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
 }

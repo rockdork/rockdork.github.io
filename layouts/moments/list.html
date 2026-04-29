@@ -5,11 +5,11 @@
   </header>
   <div class="moments-grid">
     {{ range .Paginator.Pages }}
-    <article class="moment-card {{ if not .Params.cover }}no-cover{{ end }}">
+    <article class="moment-card {{ if not .Params.featured_image }}no-cover{{ end }}">
       <a href="{{ .RelPermalink }}" class="moment-card-link">
         {{ with .Params.featured_image }}
         <div class="moment-cover">
-          <img src="{{ . | relURL }}" alt="{{ $.Title }}">
+          <img src="{{ . | relURL }}" alt="{{ .Title }}" onerror="this.parentElement.classList.add('cover-fallback')">
         </div>
         {{ end }}
         <div class="moment-meta">
@@ -22,4 +22,12 @@
   </div>
   {{ partial "pagination.html" . }}
 </main>
+<script>
+// 图片加载失败时优雅降级
+document.querySelectorAll('.moment-cover img').forEach(img => {
+  img.addEventListener('error', function() {
+    this.parentElement.classList.add('cover-fallback');
+  });
+});
+</script>
 {{ end }}
