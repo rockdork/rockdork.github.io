@@ -9,7 +9,7 @@
       <a href="{{ .RelPermalink }}" class="moment-card-link">
         {{ with .Params.featured_image }}
         <div class="moment-cover">
-          <img src="{{ . | relURL }}" alt="{{ .Title }}" onerror="this.parentElement.classList.add('cover-fallback')">
+          <img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy" onerror="this.parentElement.classList.add('cover-fallback')">
         </div>
         {{ end }}
         <div class="moment-meta">
