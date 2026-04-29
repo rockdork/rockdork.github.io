@@ -64,6 +64,12 @@ summaryLength = 80
   weight = 1
 
 [[menu.main]]
+  identifier = "moments"
+  name = "动态"
+  url = "/moments/"
+  weight = 1.5
+
+[[menu.main]]
   identifier = "tags"
   name = "标签"
   url = "/tags/"

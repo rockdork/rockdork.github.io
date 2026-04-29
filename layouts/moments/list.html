@@ -1,0 +1,25 @@
+{{ define "main" }}
+<main class="page-main">
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+  </header>
+  <div class="moments-grid">
+    {{ range .Paginator.Pages }}
+    <article class="moment-card {{ if not .Params.cover }}no-cover{{ end }}">
+      <a href="{{ .RelPermalink }}" class="moment-card-link">
+        {{ with .Params.cover }}
+        <div class="moment-cover">
+          <img src="{{ . | relURL }}" alt="{{ $.Title }}">
+        </div>
+        {{ end }}
+        <div class="moment-meta">
+          <h2 class="moment-title">{{ .Title }}</h2>
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006/01/02" }}</time>
+        </div>
+      </a>
+    </article>
+    {{ end }}
+  </div>
+  {{ partial "pagination.html" . }}
+</main>
+{{ end }}
