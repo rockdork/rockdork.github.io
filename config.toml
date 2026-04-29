@@ -24,10 +24,7 @@ summaryLength = 80
 
   DateFormat = '2006/01/02'
 
-  # 首页信息
-  [params.homeInfoParams]
-    Title = '三言二鱼'
-    Content = '三言两语，记录真实思考'
+  # 首页直接显示文章列表
 
   mainSections = ["posts"]
 
