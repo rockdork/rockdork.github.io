@@ -6,9 +6,7 @@ layout: "about"
 
 ## 关于这里
 
-「三言二鱼」是一个个人博客，记录思考、发现与创作。
-
-主题很简单：少说废话，多留真意。
+三言二鱼，记录成长的个人博客，有思考、有经历…在自由生长。
 
 ## 这个网站
 
@@ -19,3 +17,4 @@ layout: "about"
 ## 联系
 
 - GitHub: [rockdork](https://github.com/rockdork)
+- 邮箱：rockdorky@qq.com
