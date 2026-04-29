@@ -590,7 +590,8 @@ pre code {
 .moments-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  /* 确保≥760px时至少3列 */
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 @media (min-width: 760px) {
   .moments-grid {
@@ -601,8 +602,6 @@ pre code {
   .moments-grid {
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   }
-  gap: 1.2rem;
-  margin-top: 1.5rem;
 }
 
 .moment-card {
