@@ -28,8 +28,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           fetch-depth: 0
+
+      - name: Checkout content (private)
+        uses: actions/checkout@v4
+        with:
+          repository: rockdork/sanyan-content
+          path: content-private
+          ssh-key: ${{ secrets.CONTENT_DEPLOY_KEY }}
+
+      - name: Merge content into site
+        run: |
+          rm -rf content
+          cp -r content-private/* content/
+          rm -rf content-private
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
