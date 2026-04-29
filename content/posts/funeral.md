@@ -1,5 +1,5 @@
 ---
-title: "一场葬礼"
+title: "送葬"
 date: 2025-04-23T10:00:00+08:00
 draft: false
 tags: ["自由生长"]

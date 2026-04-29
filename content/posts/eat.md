@@ -1,5 +1,5 @@
 ---
-title: "吃"
+title: "他，以食为天"
 date: 2025-04-28T10:00:00+08:00
 draft: false
 tags: ["自由生长"]
