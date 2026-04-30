@@ -1,58 +1,58 @@
-/* ===== 三言二鱼 · 暖色纸张风格 ===== */
-/* 灵感来自 gudong.site 的温暖纸感美学 */
+/* ===== 三言二鱼 · 冷灰极简风格 ===== */
+/* 参考 hutusi.com 的克制灰白美学 */
 
 /* --- 字体 --- */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
 
 :root {
-  /* 暖色纸张调色板 */
-  --bg-primary: #F5F1EB;
-  --bg-secondary: #E8E3DA;
-  --bg-card: #FAF8F5;
-  --text-primary: #2C2A26;
-  --text-secondary: #6B655E;
-  --text-tertiary: #9A958F;
+  /* 冷灰极简调色板 */
+  --bg-primary: #FAFAFA;
+  --bg-secondary: #F4F4F5;
+  --bg-card: #FFFFFF;
+  --text-primary: #18181B;
+  --text-secondary: #71717A;
+  --text-tertiary: #A1A1AA;
   --accent: #C44536;
   --accent-hover: #A8382A;
-  --warm-border: #D4CFC7;
-  --warm-border-light: #E5E0D8;
-  --warm-shadow: rgba(44, 42, 38, 0.08);
+  --warm-border: #D4D4D8;
+  --warm-border-light: #E4E4E7;
+  --warm-shadow: rgba(0, 0, 0, 0.06);
 
   /* 覆盖 PaperMod 变量 */
-  --theme: #F5F1EB;
-  --entry: #FAF8F5;
-  --primary: #2C2A26;
-  --secondary: #6B655E;
-  --tertiary: #E8E3DA;
-  --content: #3A3833;
-  --code-block-bg: #F0ECE4;
-  --code-bg: #EDE8DF;
-  --border: #D4CFC7;
+  --theme: #FAFAFA;
+  --entry: #FFFFFF;
+  --primary: #18181B;
+  --secondary: #71717A;
+  --tertiary: #F4F4F5;
+  --content: #3F3F46;
+  --code-block-bg: #F4F4F5;
+  --code-bg: #E4E4E7;
+  --border: #D4D4D8;
 }
 
 /* ===== 暗色模式 · 暖调深色 ===== */
 [data-theme="dark"] {
-  --bg-primary: #1A1917;
-  --bg-secondary: #252320;
-  --bg-card: #2A2826;
-  --text-primary: #E8E3DA;
-  --text-secondary: #A39E95;
-  --text-tertiary: #7A756D;
+  --bg-primary: #09090B;
+  --bg-secondary: #18181B;
+  --bg-card: #1C1C1F;
+  --text-primary: #FAFAFA;
+  --text-secondary: #A1A1AA;
+  --text-tertiary: #71717A;
   --accent: #E05A4B;
   --accent-hover: #F06B5C;
-  --warm-border: #3D3A36;
-  --warm-border-light: #33302C;
-  --warm-shadow: rgba(0, 0, 0, 0.25);
+  --warm-border: #27272A;
+  --warm-border-light: #1F1F23;
+  --warm-shadow: rgba(0, 0, 0, 0.4);
 
-  --theme: #1A1917;
-  --entry: #252320;
-  --primary: #E8E3DA;
-  --secondary: #A39E95;
-  --tertiary: #33302C;
-  --content: #C8C3BB;
-  --code-block-bg: #252320;
-  --code-bg: #2E2B28;
-  --border: #3D3A36;
+  --theme: #09090B;
+  --entry: #18181B;
+  --primary: #FAFAFA;
+  --secondary: #A1A1AA;
+  --tertiary: #1F1F23;
+  --content: #D4D4D8;
+  --code-block-bg: #18181B;
+  --code-bg: #27272A;
+  --border: #27272A;
 }
 
 /* --- 全局 --- */
