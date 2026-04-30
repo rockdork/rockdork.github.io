@@ -7,24 +7,48 @@
 
   {{ .Content }}
 
-  <div class="works-page">
-    <div class="works-category">
-      <h2 class="works-category-title">✍️ 公众号</h2>
-      <div class="works-grid">
-        <a class="works-card" href="https://mp.weixin.qq.com/s/抓手" target="_blank" rel="noopener">
-          <div class="works-card-header">
-            <h3>三言二鱼</h3>
-            <span class="works-status">持续更新</span>
-          </div>
-          <p class="works-desc">三言两语，鱼游深水。个人成长与感悟类内容，简短记录，但不止于表面。</p>
-          <div class="works-tags">
-            <span class="works-tag">个人成长</span>
-            <span class="works-tag">感悟</span>
-            <span class="works-tag">写作</span>
-          </div>
-        </a>
+  <div class="works-showcase">
+    <!-- 公众号 -->
+    <a class="work-card" href="https://mp.weixin.qq.com/s/抓手" target="_blank" rel="noopener">
+      <div class="work-card-icon">✍️</div>
+      <div class="work-card-body">
+        <div class="work-card-header">
+          <h3 class="work-card-title">三言二鱼</h3>
+          <span class="work-status">持续更新</span>
+        </div>
+        <p class="work-card-desc">三言两语，鱼游深水。个人成长与感悟类内容，简短记录，但不止于表面。</p>
+        <div class="work-card-meta">
+          <span class="work-tag">个人成长</span>
+          <span class="work-tag">感悟</span>
+          <span class="work-tag">写作</span>
+        </div>
       </div>
-    </div>
+      <div class="work-card-action">
+        <span>关注</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </div>
+    </a>
+
+    <!-- 个人博客 -->
+    <a class="work-card" href="https://rockdork.github.io/" target="_blank" rel="noopener">
+      <div class="work-card-icon">📚</div>
+      <div class="work-card-body">
+        <div class="work-card-header">
+          <h3 class="work-card-title">三言二鱼的个人博客</h3>
+          <span class="work-status">稳定运行</span>
+        </div>
+        <p class="work-card-desc">技术、生活、写作历程的分享与思考。Hugo 驱动，暖色纸张美学。</p>
+        <div class="work-card-meta">
+          <span class="work-tag">rockdork.github.io</span>
+          <span class="work-tag">Hugo</span>
+          <span class="work-tag">博客</span>
+        </div>
+      </div>
+      <div class="work-card-action">
+        <span>访问</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </div>
+    </a>
   </div>
 </main>
 
