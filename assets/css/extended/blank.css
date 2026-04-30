@@ -856,15 +856,16 @@ pre code {
   color: var(--text-tertiary);
 }
 
-/* 无图卡片 - 保持合理高度 */
+/* 无图卡片 - 固定高度，与有图卡片对齐 */
 .moment-card.no-cover {
-  min-height: 120px;
+  height: 220px;
   display: flex;
   align-items: center;
 }
 
 .moment-card.no-cover .moment-meta {
-  padding: 1.2rem 1.2rem;
+  padding: 1.2rem;
+  width: 100%;
 }
 
 /* 详情页 - 对齐 .post-single */
