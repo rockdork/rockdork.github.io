@@ -856,9 +856,11 @@ pre code {
   color: var(--text-tertiary);
 }
 
-/* 无图卡片 - 对齐普通文章卡片高度 */
+/* 无图卡片 - 保持合理高度 */
 .moment-card.no-cover {
-  min-height: auto;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
 }
 
 .moment-card.no-cover .moment-meta {
