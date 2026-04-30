@@ -90,6 +90,7 @@ summaryLength = 80
 # Markdown 配置
 [markup]
   [markup.goldmark]
+    hardWraps = true
     [markup.goldmark.renderer]
       unsafe = true
   [markup.highlight]
