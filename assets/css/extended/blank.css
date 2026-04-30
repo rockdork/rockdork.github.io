@@ -384,16 +384,10 @@ pre code {
 
 /* ===== 作品页 · 双卡片展示 ===== */
 .works-showcase {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
   margin-top: 2rem;
-}
-
-@media (max-width: 680px) {
-  .works-showcase {
-    grid-template-columns: 1fr;
-  }
 }
 
 .work-card {
