@@ -65,7 +65,7 @@ summaryLength = 80
 
 [[menu.main]]
   identifier = "moments"
-  name = "动态"
+  name = "拾光"
   url = "/moments/"
   weight = 1.5
 
@@ -108,7 +108,7 @@ summaryLength = 80
 
 # 分页
 [pagination]
-  pagerSize = 10
+  pagerSize = 12
 
 # 图片处理
 [imaging]
