@@ -1,0 +1,12 @@
+{{- /* 吸顶导航滚动阴影 */ -}}
+<script>
+(function(){
+  var h=document.querySelector('.header');
+  if(!h)return;
+  var t=0;
+  window.addEventListener('scroll',function(){
+    var s=window.scrollY>10;
+    if(s!==t){h.classList.toggle('scrolled',s);t=s;}
+  },{passive:true});
+})();
+</script>

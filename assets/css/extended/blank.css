@@ -63,10 +63,21 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* --- 导航 --- */
+/* --- 导航 · 吸顶磨砂玻璃 --- */
 .header {
-  background: var(--bg-primary);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: color-mix(in srgb, var(--bg-primary) 80%, transparent);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
   border-bottom: 1px solid var(--warm-border-light);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 滚动后加阴影增强层次 */
+.header.scrolled {
+  box-shadow: 0 1px 12px var(--warm-shadow);
 }
 
 .logo a {
@@ -563,6 +574,16 @@ pre code {
 /* 暗色下导航 active 状态 */
 [data-theme="dark"] .menu .active {
   color: var(--text-primary) !important;
+}
+
+/* 暗色下磨砂玻璃 */
+[data-theme="dark"] .header {
+  background: color-mix(in srgb, var(--bg-primary) 75%, transparent);
+  border-bottom-color: var(--warm-border-light);
+}
+
+[data-theme="dark"] .header.scrolled {
+  box-shadow: 0 1px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* --- 搜索图标 --- */
