@@ -964,6 +964,101 @@ pre code {
   border-color: var(--warm-border);
 }
 
+/* ===== 标签页 · 双区布局 ===== */
+.tag-section {
+  margin-bottom: 2.5rem;
+}
+
+.tag-section-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--warm-border-light);
+}
+
+.tag-section-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--entry);
+  border: 1px solid var(--warm-border-light);
+  border-radius: 100px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.tag-pill:hover {
+  background: var(--accent);
+  color: #fff !important;
+  border-color: var(--accent);
+}
+
+.tag-pill-mood {
+  background: var(--bg-card);
+  border-color: var(--warm-border-light);
+}
+
+.tag-pill-mood:hover {
+  background: var(--accent);
+  color: #fff !important;
+  border-color: var(--accent);
+}
+
+.tag-count {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  background: var(--bg-secondary);
+  border-radius: 100px;
+  padding: 0.05rem 0.4rem;
+  min-width: 1.2rem;
+  text-align: center;
+}
+
+.tag-pill:hover .tag-count {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+}
+
+/* ===== 拾光卡片 · 印记标签 ===== */
+.moment-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.3rem;
+}
+
+.moment-moods {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.mood-pill {
+  font-size: 0.72rem;
+  color: var(--accent);
+  background: rgba(196, 69, 54, 0.06);
+  padding: 0.1rem 0.45rem;
+  border-radius: 100px;
+  font-weight: 400;
+}
+
+[data-theme="dark"] .mood-pill {
+  background: rgba(224, 90, 75, 0.1);
+}
+
 /* ===== 分页器 · 简约暖色风格 ===== */
 .pagination {
   display: flex;

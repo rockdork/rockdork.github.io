@@ -14,16 +14,7 @@
         {{ end }}
         <div class="moment-meta">
           <h2 class="moment-title">{{ .Title }}</h2>
-          <div class="moment-footer">
-            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006/01/02" }}</time>
-            {{ with .Params.moods }}
-            <div class="moment-moods">
-              {{ range . }}
-              <span class="mood-pill">{{ . }}</span>
-              {{ end }}
-            </div>
-            {{ end }}
-          </div>
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006/01/02" }}</time>
         </div>
       </a>
     </article>
@@ -31,12 +22,4 @@
   </div>
   {{ partial "pagination.html" . }}
 </main>
-<script>
-// 图片加载失败时优雅降级
-document.querySelectorAll('.moment-cover img').forEach(img => {
-  img.addEventListener('error', function() {
-    this.parentElement.classList.add('cover-fallback');
-  });
-});
-</script>
 {{ end }}

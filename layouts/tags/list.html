@@ -1,0 +1,31 @@
+{{ define "main" }}
+<main class="page-main">
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+  </header>
+
+  <!-- 博客标签 -->
+  <section class="tag-section">
+    <h2 class="tag-section-title">博客标签</h2>
+    <div class="tag-section-list">
+      {{ range .Site.Taxonomies.tags.Alphabetical }}
+      <a href="{{ .Page.RelPermalink }}" class="tag-pill">
+        {{ .Page.Title }}<span class="tag-count">{{ .Count }}</span>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- 拾光印记 -->
+  <section class="tag-section">
+    <h2 class="tag-section-title">拾光印记</h2>
+    <div class="tag-section-list">
+      {{ range .Site.Taxonomies.moods.Alphabetical }}
+      <a href="{{ .Page.RelPermalink }}" class="tag-pill tag-pill-mood">
+        {{ .Page.Title }}<span class="tag-count">{{ .Count }}</span>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+</main>
+{{ end }}
