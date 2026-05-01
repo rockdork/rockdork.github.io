@@ -30,8 +30,8 @@ summaryLength = 80
 
   # 资源配色
   [params.assets]
-    theme_color = '#F5F1EB'
-    msapplication_TileColor = '#F5F1EB'
+    theme_color = '#FAFAFA'
+    msapplication_TileColor = '#FAFAFA'
 
   # 社交图标
   [[params.socialIcons]]

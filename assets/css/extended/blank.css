@@ -63,6 +63,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* 覆盖 PaperMod 的 .list 灰色背景，统一用 --theme */
+.list {
+  background: var(--theme) !important;
+}
+
 /* --- 导航 · 吸顶磨砂玻璃 --- */
 .header {
   position: sticky;
