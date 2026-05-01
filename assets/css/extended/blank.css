@@ -1131,3 +1131,59 @@ pre code {
   background: var(--accent-hover);
   border-color: var(--accent-hover);
 }
+
+/* ===== 文章底部导航 · 上一篇/下一篇 ===== */
+.paginav {
+  border-radius: 8px;
+  border: 1px solid var(--warm-border-light);
+  background: transparent;
+  overflow: hidden;
+}
+
+.paginav a {
+  padding: 1rem 1.2rem;
+  gap: 0.4rem;
+  border-radius: 0;
+  transition: background 0.2s ease;
+}
+
+.paginav a:first-child {
+  border-right: 1px solid var(--warm-border-light);
+}
+
+.paginav a:hover {
+  background: var(--bg-secondary);
+}
+
+.paginav .title {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+.paginav .post-nav-title {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.paginav span:hover:not(.title) {
+  text-decoration: none;
+}
+
+[data-theme="dark"] .paginav {
+  border-color: var(--warm-border);
+}
+
+[data-theme="dark"] .paginav a:first-child {
+  border-right-color: var(--warm-border);
+}
+
+[data-theme="dark"] .paginav a:hover {
+  background: var(--bg-card);
+}
