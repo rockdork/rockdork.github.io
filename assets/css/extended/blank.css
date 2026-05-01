@@ -365,6 +365,13 @@ pre code {
   margin-bottom: 1.5rem;
 }
 
+/* 关于页等单页也加分割线 */
+.post-single > .post-header {
+  border-bottom: 1px solid var(--warm-border-light);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
 /* --- 归档年份/月份 --- */
 .archive-year {
   font-family: 'Noto Serif SC', serif;
@@ -985,7 +992,6 @@ pre code {
   color: var(--text-primary);
   margin: 0 0 1rem 0;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--warm-border-light);
 }
 
 .tag-section-list {
