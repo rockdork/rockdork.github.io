@@ -1268,7 +1268,7 @@ pre code {
   color: var(--text-tertiary);
 }
 
-.search-overlay-close {
+.search-overlay-clear {
   flex-shrink: 0;
   background: none;
   border: none;
@@ -1281,9 +1281,21 @@ pre code {
   transition: color 0.15s, background 0.15s;
 }
 
-.search-overlay-close:hover {
+.search-overlay-clear:hover {
   color: var(--text-primary);
   background: var(--bg-secondary);
+}
+
+.search-overlay-esc {
+  flex-shrink: 0;
+  padding: 2px 8px;
+  font-size: 0.6875rem;
+  font-family: inherit;
+  border: 1px solid var(--warm-border);
+  border-radius: 4px;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  line-height: 1.4;
 }
 
 .search-overlay-results {

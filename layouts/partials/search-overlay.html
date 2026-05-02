@@ -8,17 +8,19 @@
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
-        <input id="searchOverlayInput" type="search" placeholder="搜索文章..." autocomplete="off" maxlength="64" aria-label="搜索">
-        <button class="search-overlay-close" onclick="closeSearch()" aria-label="关闭搜索">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
+        <input id="searchOverlayInput" type="text" placeholder="搜索文章..." autocomplete="off" maxlength="64" aria-label="搜索">
+        <button class="search-overlay-clear" id="searchOverlayClear" aria-label="清空" style="display:none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="15" y1="9" x2="9" y2="15"></line>
+            <line x1="9" y1="9" x2="15" y2="15"></line>
           </svg>
         </button>
+        <kbd class="search-overlay-esc">Esc</kbd>
       </div>
       <ul id="searchOverlayResults" class="search-overlay-results"></ul>
       <div class="search-overlay-footer">
-        <kbd>↵</kbd> 打开 · <kbd>↑↓</kbd> 选择 · <kbd>Esc</kbd> 关闭
+        <kbd>↵</kbd> 打开 · <kbd>↑↓</kbd> 选择 · <kbd>⌘K</kbd> 切换
       </div>
     </div>
   </div>
@@ -30,8 +32,23 @@
   const overlay = document.getElementById('searchOverlay');
   const input = document.getElementById('searchOverlayInput');
   const resultsList = document.getElementById('searchOverlayResults');
+  const clearBtn = document.getElementById('searchOverlayClear');
   let first, last, currentElem = null;
   let resultsAvailable = false;
+
+  // Show/hide clear button based on input
+  function toggleClear() {
+    clearBtn.style.display = input.value.length > 0 ? '' : 'none';
+  }
+
+  // Clear button click
+  clearBtn.addEventListener('click', function() {
+    input.value = '';
+    resultsList.innerHTML = '';
+    resultsAvailable = false;
+    clearBtn.style.display = 'none';
+    input.focus();
+  });
 
   // Load Fuse index
   fetch('/index.json')
@@ -75,8 +92,10 @@
     overlay.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
     input.value = '';
+    clearBtn.style.display = 'none';
     resultsList.innerHTML = '';
     resultsAvailable = false;
+    currentElem = null;
   };
 
   // Keyboard shortcut: Ctrl/Cmd + K or /
@@ -133,12 +152,16 @@
     document.querySelectorAll('.search-overlay-results .focus').forEach(el => el.classList.remove('focus'));
   }
 
-  // Search input
-  input.addEventListener('keyup', function(e) {
-    if (e.key === 'ArrowDown' || e.key === 'ArrowUp' || e.key === 'Enter' || e.key === 'Escape') return;
+  // Search on input event (fires on every change, including paste/IME)
+  input.addEventListener('input', function() {
+    toggleClear();
+    doSearch();
+  });
+
+  function doSearch() {
     if (!fuse) return;
 
-    const query = this.value.trim();
+    const query = input.value.trim();
     if (!query) {
       resultsList.innerHTML = '';
       resultsAvailable = false;
@@ -152,10 +175,14 @@
       let html = '';
       for (const item of results) {
         const r = item.item;
+        const title = r.title || '';
+        const summary = r.summary || '';
+        // Strip HTML tags from summary for display
+        const cleanSummary = summary.replace(/<[^>]*>/g, '').substring(0, 120);
         html += `<li>
           <a href="${r.permalink}">
-            <span class="search-result-title">${r.title}</span>
-            <span class="search-result-summary">${r.summary || ''}</span>
+            <span class="search-result-title">${title}</span>
+            <span class="search-result-summary">${cleanSummary}</span>
           </a>
         </li>`;
       }
@@ -167,13 +194,6 @@
       resultsList.innerHTML = '<li class="search-no-result">没有找到相关内容</li>';
       resultsAvailable = false;
     }
-  });
-
-  input.addEventListener('search', function() {
-    if (!this.value) {
-      resultsList.innerHTML = '';
-      resultsAvailable = false;
-    }
-  });
+  }
 })();
 </script>
