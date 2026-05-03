@@ -30,3 +30,4 @@ package-lock.json
 # 旧 CSS 核心（已迁移回 extended/blank.css）
 assets/css/core/
 assets/css/common/
+scripts/
