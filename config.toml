@@ -49,13 +49,7 @@ summaryLength = 80
     keys = ["title", "permalink", "summary", "content"]
 
 # 菜单
-[[menu.main]]
-  identifier = "search"
-  name = "搜索"
-  url = "/search/"
-  weight = 0
-  [menu.main.params]
-    icon = true
+# 搜索已移至右上角图标按钮，不再需要菜单项
 
 [[menu.main]]
   identifier = "posts"

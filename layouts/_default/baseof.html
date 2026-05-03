@@ -27,17 +27,7 @@
     </main>
     {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
     {{ partialCached "sticky-header.html" . -}}
-    {{ partialCached "search-overlay.html" . -}}
-    <script>
-    // Intercept search nav link to open overlay instead
-    document.addEventListener('click', function(e) {
-      const link = e.target.closest('#menu a[href$="/search/"]');
-      if (link) {
-        e.preventDefault();
-        openSearch();
-      }
-    });
-    </script>
+    {{ partialCached "search-overlay.html" . - }}
 </body>
 
 </html>
