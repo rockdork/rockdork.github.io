@@ -75,9 +75,10 @@
           keys: ['title', 'permalink', 'summary', 'content']
         };
         fuse = new Fuse(data, options);
+        console.log('[Search] Fuse ready, index size:', data.length);
       }
     })
-    .catch(err => console.error('Search index load failed:', err));
+    .catch(err => console.error('[Search] Index load failed:', err));
 
   // Open / Close
   window.openSearch = function() {
@@ -152,14 +153,25 @@
     document.querySelectorAll('.search-overlay-results .focus').forEach(el => el.classList.remove('focus'));
   }
 
-  // Search on input event (fires on every change, including paste/IME)
-  input.addEventListener('input', function() {
-    toggleClear();
+  // IME composition tracking — skip search during composition
+  let isComposing = false;
+  input.addEventListener('compositionstart', function() { isComposing = true; });
+  input.addEventListener('compositionend', function() {
+    isComposing = false;
     doSearch();
   });
 
+  // Search on input event (skip if IME is composing)
+  input.addEventListener('input', function() {
+    toggleClear();
+    if (!isComposing) doSearch();
+  });
+
   function doSearch() {
-    if (!fuse) return;
+    if (!fuse) {
+      console.warn('[Search] Fuse index not ready yet');
+      return;
+    }
 
     const query = input.value.trim();
     if (!query) {
@@ -190,8 +202,10 @@
       resultsAvailable = true;
       first = resultsList.firstChild;
       last = resultsList.lastChild;
+      console.log('[Search] Results for "' + query + '":', results.length, 'hits');
     } else {
       resultsList.innerHTML = '<li class="search-no-result">没有找到相关内容</li>';
+      console.log('[Search] No results for "' + query + '"');
       resultsAvailable = false;
     }
   }
