@@ -317,12 +317,21 @@ pre code {
   border-bottom-color: var(--accent);
 }
 
+/* --- 导航栏布局修正 --- */
+.header-nav {
+  justify-content: flex-start !important;
+}
+
+.menu {
+  margin-left: auto;
+}
+
 /* --- 主题切换按钮（右上角） --- */
 .header-actions {
   display: flex;
   align-items: center;
-  margin-left: auto;
   flex-shrink: 0;
+  margin-left: 0.5rem;
 }
 
 .theme-toggle {
