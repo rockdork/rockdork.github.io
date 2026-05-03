@@ -317,9 +317,36 @@ pre code {
   border-bottom-color: var(--accent);
 }
 
-/* --- 主题切换按钮 --- */
+/* --- 主题切换按钮（右上角） --- */
+.header-actions {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
 .theme-toggle {
   color: var(--text-secondary);
+  background: none;
+  border: 1px solid var(--warm-border);
+  border-radius: 8px;
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--bg-secondary);
+}
+
+/* 隐藏 PaperMod 原来的 .logo-switches（如果残留） */
+.logo-switches {
+  display: none !important;
 }
 
 /* --- 滚动条美化 --- */
