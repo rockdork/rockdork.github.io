@@ -1,0 +1,82 @@
+{{- define "main" }}
+
+<main class="snote-landing">
+  <!-- Hero -->
+  <section class="snote-hero">
+    <div class="snote-hero-badge">v{{ .Params.version }}</div>
+    <h1 class="snote-hero-title">你的笔记，你做主</h1>
+    <p class="snote-hero-subtitle">本地优先的 Markdown 笔记管理工具。数据在你手中，隐私由你掌控。</p>
+    <div class="snote-hero-actions">
+      <a class="snote-btn snote-btn-primary" href="#features">了解更多</a>
+      <a class="snote-btn snote-btn-ghost" href="https://github.com/rockdork" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="snote-features" id="features">
+    <h2 class="snote-section-title">核心特性</h2>
+    <div class="snote-feature-grid">
+      <div class="snote-feature-card">
+        <div class="snote-feature-icon">📁</div>
+        <h3>本地优先</h3>
+        <p>所有笔记存储在本地文件系统，无需账号注册，不依赖云端服务。你的数据，你做主。</p>
+      </div>
+      <div class="snote-feature-card">
+        <div class="snote-feature-icon">📝</div>
+        <h3>Markdown 原生</h3>
+        <p>纯 Markdown 编辑体验，支持实时预览。所见即所得，排版随心所欲。</p>
+      </div>
+      <div class="snote-feature-card">
+        <div class="snote-feature-icon">📱</div>
+        <h3>移动端优先</h3>
+        <p>为手机场景深度优化，随时随地记录灵感。通勤、散步、睡前，抬手即写。</p>
+      </div>
+      <div class="snote-feature-card">
+        <div class="snote-feature-icon">🔒</div>
+        <h3>隐私至上</h3>
+        <p>不收集任何用户数据，不追踪使用行为。笔记是你最私密的思考空间。</p>
+      </div>
+      <div class="snote-feature-card">
+        <div class="snote-feature-icon">📂</div>
+        <h3>开放格式</h3>
+        <p>标准 .md 文件，随时可迁移。不被任何工具锁定，你的笔记永远属于你。</p>
+      </div>
+      <div class="snote-feature-card">
+        <div class="snote-feature-icon">✨</div>
+        <h3>轻量高效</h3>
+        <p>极简设计，快速启动。没有多余功能干扰，专注于写这件事本身。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section class="snote-philosophy">
+    <h2 class="snote-section-title">设计理念</h2>
+    <div class="snote-philosophy-content">
+      <blockquote class="snote-quote">
+        <p>笔记工具应该是你和思考之间的桥梁，而不是一堵墙。</p>
+      </blockquote>
+      <div class="snote-philosophy-text">
+        <p>市面上的笔记工具越来越复杂——知识图谱、双向链接、AI 助手……功能越堆越多，写东西却越来越难。</p>
+        <p>SNote 选择做减法。我们相信，好的笔记工具应该让你专注于思考本身，而不是在功能迷宫里绕路。</p>
+        <p>本地文件、Markdown 格式、移动端友好——就这三件事，做到极致。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="snote-cta">
+    <h2>开始记录你的思考</h2>
+    <p>SNote v{{ .Params.version }} 已发布，更多平台支持正在路上。</p>
+    <div class="snote-hero-actions">
+      <a class="snote-btn snote-btn-primary" href="https://github.com/rockdork" target="_blank" rel="noopener">查看发布</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="snote-landing-footer">
+    <p>由 <a href="/">三言二鱼</a> 出品 · 以热爱驱动</p>
+  </footer>
+</main>
+
+{{- end }}
