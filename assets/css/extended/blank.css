@@ -271,6 +271,7 @@ pre code {
 /* --- 关于页 --- */
 .post-content p {
   line-height: 1.9;
+  white-space: pre-line;
 }
 
 /* --- 选中文字颜色 --- */
