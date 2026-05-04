@@ -55,7 +55,7 @@
     .then(res => res.json())
     .then(data => {
       if (data) {
-        const fuseOpts = {{ .Site.Params.fuseOpts | jsonify | safeJS }};
+        const fuseOpts = null;
         const options = fuseOpts ? {
           isCaseSensitive: fuseOpts.iscasesensitive || false,
           includeScore: fuseOpts.includescore || false,
@@ -180,7 +180,7 @@
       return;
     }
 
-    const limit = {{ .Site.Params.fuseOpts.limit | default 10 }};
+    const limit = 10;
     const results = fuse.search(query, { limit: limit });
 
     if (results.length > 0) {
