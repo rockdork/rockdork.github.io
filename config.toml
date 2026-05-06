@@ -1,5 +1,5 @@
 # 三言二鱼
-baseURL = 'https://rockdork.github.io/'
+baseURL = 'https://blog.rockdork.cn/'
 languageCode = 'zh-CN'
 title = '三言二鱼'
 theme = 'PaperMod'
