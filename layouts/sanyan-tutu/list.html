@@ -1,0 +1,87 @@
+{{- define "main" }}
+
+<main class="tutu-landing">
+  <!-- Hero -->
+  <section class="tutu-hero">
+    <div class="tutu-hero-badge">开发中</div>
+    <h1 class="tutu-hero-title">图床上传，随心切换</h1>
+    <p class="tutu-hero-subtitle">支持七牛云、腾讯云、GitHub 等多种对象存储。一个工具，搞定所有图床。</p>
+    <div class="tutu-hero-actions">
+      <a class="tutu-btn tutu-btn-primary" href="#features">了解更多</a>
+      <a class="tutu-btn tutu-btn-ghost" href="https://github.com/rockdork" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="tutu-features" id="features">
+    <h2 class="tutu-section-title">核心特性</h2>
+    <div class="tutu-feature-grid">
+      <div class="tutu-feature-card">
+        <div class="tutu-feature-icon">☁️</div>
+        <h3>多云支持</h3>
+        <p>七牛云、腾讯云 COS、GitHub 等主流对象存储一键配置，按需切换，不受单一平台限制。</p>
+      </div>
+      <div class="tutu-feature-card">
+        <div class="tutu-feature-icon">🔗</div>
+        <h3>自动链接</h3>
+        <p>上传即生成 Markdown 图片链接，粘贴即用。支持自定义域名和 CDN 加速链接。</p>
+      </div>
+      <div class="tutu-feature-card">
+        <div class="tutu-feature-icon">⚙️</div>
+        <h3>灵活配置</h3>
+        <p>每个存储源独立配置 Bucket、Region、域名。多套方案并存，随时切换，互不干扰。</p>
+      </div>
+      <div class="tutu-feature-card">
+        <div class="tutu-feature-icon">🚀</div>
+        <h3>极速上传</h3>
+        <p>拖拽或粘贴图片，秒级上传完成。批量上传支持，大量图片一键搞定。</p>
+      </div>
+      <div class="tutu-feature-card">
+        <div class="tutu-feature-icon">📋</div>
+        <h3>格式丰富</h3>
+        <p>输出 Markdown、HTML、原始链接等多种格式，适配博客、文档、社交等不同场景。</p>
+      </div>
+      <div class="tutu-feature-card">
+        <div class="tutu-feature-icon">🛡️</div>
+        <h3>本地凭证</h3>
+        <p>AK/SK 等密钥存储在本地，不上传云端。你的配置，只属于你。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supported Storage -->
+  <section class="tutu-providers">
+    <h2 class="tutu-section-title">支持的对象存储</h2>
+    <div class="tutu-provider-grid">
+      <div class="tutu-provider-card">
+        <div class="tutu-provider-name">七牛云</div>
+        <div class="tutu-provider-desc">Kodo 对象存储，CDN 加速</div>
+      </div>
+      <div class="tutu-provider-card">
+        <div class="tutu-provider-name">腾讯云</div>
+        <div class="tutu-provider-desc">COS 对象存储，全球部署</div>
+      </div>
+      <div class="tutu-provider-card">
+        <div class="tutu-provider-name">GitHub</div>
+        <div class="tutu-provider-desc">公开仓库 + jsDelivr CDN</div>
+      </div>
+    </div>
+    <p class="tutu-provider-more">更多平台持续接入中…</p>
+  </section>
+
+  <!-- CTA -->
+  <section class="tutu-cta">
+    <h2>你的图片，你做主</h2>
+    <p>不再被单一图床绑定，选择权回到你手里。</p>
+    <div class="tutu-hero-actions">
+      <a class="tutu-btn tutu-btn-primary" href="https://github.com/rockdork" target="_blank" rel="noopener">关注开发进度</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="tutu-landing-footer">
+    <p>由 <a href="/">三言二鱼</a> 出品 · 以热爱驱动</p>
+  </footer>
+</main>
+
+{{- end }}
