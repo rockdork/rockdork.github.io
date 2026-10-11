@@ -31,6 +31,8 @@ draft: false
 <div class="timeline-card">
 <h3 class="timeline-card-title">🕐 博客历史</h3>
 <div class="blog-timeline">
+<div class="timeline-item"><span class="timeline-date">2026/10/11</span>
+<span class="timeline-text">全面升级温润纸白极简设计，引入系统无衬线字体与切角矩圆</span></div>
 <div class="timeline-item"><span class="timeline-date">2026/04/29</span>
 <span class="timeline-text">双仓库架构上线，内容私有、框架公开</span></div>
 <div class="timeline-item"><span class="timeline-date">2026/04/27</span>
