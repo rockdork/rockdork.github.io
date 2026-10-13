@@ -31,3 +31,18 @@ package-lock.json
 assets/css/core/
 assets/css/common/
 scripts/
+
+# ===== 工作区约定：统一临时区（AGENTS.md §九，勿手工删本块标记）=====
+# 临时工作区：调研/截图/草稿/一次性产物一律放这里，任务完成即整目录删
+.tmp/
+# 旧位置兼容（历史遗留，新内容不要再写进去）
+.workbuddy/
+.zcode/
+# 构建与缓存产物
+dist/
+build/
+release-assets/
+*.db
+.env
+.DS_Store
+# ===== 临时区约定结束 =====
